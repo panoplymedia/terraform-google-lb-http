@@ -115,3 +115,20 @@ variable cdn {
   description = "Set to `true` to enable cdn on backend."
   default     = "false"
 }
+
+variable iap {
+  description = "Set to `true` to enable IAP. Will need to specify oauth2_client_id and oauth2_client_secret."
+  type        = "list"
+  default     = []
+}
+
+/*variable oauth2_client_id {
+  description = "The oauth2_client_id with which to setup IAP on the backend service."
+  default     = ""
+}
+
+variable oauth2_client_secret {
+  description = "The oauth2_client_secret with which to setup IAP on the backend service."
+  default     = ""
+}
+*/

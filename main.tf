@@ -87,6 +87,7 @@ resource "google_compute_backend_service" "default" {
   health_checks   = ["${element(google_compute_http_health_check.default.*.self_link, count.index)}"]
   security_policy = "${var.security_policy}"
   enable_cdn      = "${var.cdn}"
+  iap             = "${var.iap}"
 }
 
 resource "google_compute_http_health_check" "default" {
